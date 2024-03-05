@@ -459,13 +459,14 @@ if __name__ == '__main__':
                                 )
                             try:
                                 # Try to translate user input to an integer
-                                array_size = int(
-                                    input(
+                                array_size = input(
                                         (f"Please enter the defined value for "
                                          f"{array_name_size[1]} (0 - 128): ")))
                             except ValueError:
                                 pass  # Ignore non-integer and try again
-
+                                
+                        # Set array_size to int to maintain expecation of integer
+                        array_size = int(array_size)
                         # Add string length argument to parameter list
                         string_lens.append(array_size)
 
